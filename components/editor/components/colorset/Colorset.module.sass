@@ -1,0 +1,45 @@
+.colorset
+  display: flex
+  justify-content: space-between
+  margin: 0px 20px
+  padding: 20px 0
+  background-color: rgba(255,255,255,0.1)
+  margin-top: 10px
+  padding: 5px
+
+  .grow
+    height: 1px
+    flex-grow: 1
+
+  .selected
+    padding-right: 20px
+    margin-top: 10px
+    span
+      box-shadow: 0 0 2px #000 inset
+      display: block
+      width: 20px
+      height: 20px
+      position: relative
+      background-attachment: fixed
+
+      &:nth-child(1)
+        z-index: 1
+
+      &:nth-child(2)
+        margin-top: -10px
+        margin-left: 10px
+
+  .colors
+    $w: 26px
+    display: flex
+    flex-wrap: wrap
+    flex-grow: 0
+    width: calc($w * 4)
+
+    span
+      cursor: pointer
+      display: block
+      width: $w
+      height: $w
+      box-shadow: 0 0 2px #000 inset
+      background-attachment: fixed
