@@ -16,7 +16,6 @@ export class Editor extends Component {
 
   width = 32;
   height = 32;
-  mirror = true;
 
   buffer = new Uint8Array(this.width * this.height);
 
@@ -78,13 +77,6 @@ export class Editor extends Component {
     const { width, buffer } = this;
     const index = width * y + x;
     buffer[index] = color;
-
-    if (this.mirror) {
-      const mx = width - x - 1;
-      const index = width * y + mx;
-      buffer[index] = color;
-    }
-
     this.drawBuffer();
   }
 
